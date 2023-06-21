@@ -1,0 +1,7 @@
+<h2>Add Comment</h2>
+<p>{{ post.id }}</p>
+<form action="{% url 'add-comment' post.slug %}"" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button>Add</button>
+</form>
